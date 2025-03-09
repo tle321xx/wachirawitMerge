@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--{{Reference}}-->
+	<app:CheckInTravellerRequest xsi:schemaLocation="http://sita.aero/iborders/APP/APPService/V1 ../APPService.xsd" xmlns:app="http://sita.aero/iborders/APP/APPService/V1" xmlns:com="http://sita.aero/iborders/APP/common/V1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<app:Header>
+        <app:DateTime>{{headerDateTime}}</app:DateTime>
+        <app:UserId>{{Flight no.}}</app:UserId>
+			<app:Agency>
+			   <com:Carrier>{{Carrier}}</com:Carrier>
+			   <com:PseudoCity>{{Departure port}}</com:PseudoCity>
+			   <com:Country>{{Departure country}}</com:Country> 
+			</app:Agency>
+			<app:TransactionId>{{TransactionId}}</app:TransactionId>
+		</app:Header> 
+		<app:Journey>
+			<com:ScheduleType>Scheduled</com:ScheduleType>	
+			<com:CarrierCode>{{Carrier}}</com:CarrierCode>	
+			<com:ServiceNumber>{{Flight no.}}</com:ServiceNumber>
+			<com:DeparturePort>{{Departure port}}</com:DeparturePort>
+			<com:ArrivalPort>{{Arrival port}}</com:ArrivalPort>
+			<com:DepartureDate>{{departureDate}}</com:DepartureDate>
+			<com:JourneyInfo>
+				<com:CarrierCode>{{Carrier}}</com:CarrierCode>
+				<com:ServiceNumber>{{Flight no.}}</com:ServiceNumber>
+				<com:OriginPort>{{Departure port}}</com:OriginPort> 
+				<com:OriginCountry>{{Departure country}}</com:OriginCountry>
+				<com:DestinationPort>{{Transit port}}</com:DestinationPort>
+				<com:DestinationCountry>{{Transit country}}</com:DestinationCountry>
+				<com:DepartureDate>{{Flight date}}</com:DepartureDate>
+				<com:DepartureTime>{{Dep time}}</com:DepartureTime>
+				<com:ArrivalDate>{{Flight date}}</com:ArrivalDate>
+				<com:ArrivalTime>{{Arr time}}</com:ArrivalTime>
+			</com:JourneyInfo>
+			<com:JourneyInfo>
+				<com:CarrierCode>{{Carrier}}</com:CarrierCode>
+				<com:ServiceNumber>{{Flight no.}}</com:ServiceNumber>
+				<com:OriginPort>{{Transit port}}</com:OriginPort> 
+				<com:OriginCountry>{{Transit country}}</com:OriginCountry>
+				<com:DestinationPort>{{Destination port}}</com:DestinationPort>
+				<com:DestinationCountry>{{Destination country}}</com:DestinationCountry>
+				<com:DepartureDate>{{Flight date}}</com:DepartureDate>
+				<com:DepartureTime>{{Transit Dep time}}</com:DepartureTime>
+				<com:ArrivalDate>{{Flight date}}</com:ArrivalDate>
+				<com:ArrivalTime>{{Arr time}}</com:ArrivalTime>
+			</com:JourneyInfo>
+
+		</app:Journey>
+		<app:Traveller>
+			<com:TravellerInfo>
+				<com:SequenceNumber>001</com:SequenceNumber>
+				<com:ExpectedId>{{expectedId0}}</com:ExpectedId>
+				<com:Type>{{Passenger Type}}</com:Type>
+				<com:Reference>1234567890</com:Reference>
+			</com:TravellerInfo>
+			<com:Identity>
+				<com:FamilyName>{{Last name}}</com:FamilyName>
+				<com:GivenNames>{{First name}}</com:GivenNames>
+				<com:BirthDate>{{Date of birth}}</com:BirthDate>
+				<com:Gender>{{Sex}}</com:Gender>
+				<com:Nationality>{{Nationality}}</com:Nationality>
+				<com:TravelDocument>
+					<com:Number>{{Document no}}</com:Number>
+					<com:Type>{{Doc Type}}</com:Type>
+					<com:IssuingState>{{Nationality}}</com:IssuingState>
+					<com:ExpiryDate>{{Expiry date}}</com:ExpiryDate>
+			   </com:TravelDocument>
+			</com:Identity>
+				<com:PNR>
+					<com:Source>19A</com:Source>
+					<com:Locator>SQ2291</com:Locator>
+				</com:PNR>
+			<com:Itinerary>			
+				<com:OriginPort>{{Transit port}}</com:OriginPort>		
+				<com:DestinationPort>{{Destination port}}</com:DestinationPort>		
+				<com:TransferAtOrigin>false</com:TransferAtOrigin>		
+				<com:TransferAtDestination>true</com:TransferAtDestination>		
+			</com:Itinerary>	
+	</app:Traveller>
+	</app:CheckInTravellerRequest>
+
+
+
+
+
+
